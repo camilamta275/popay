@@ -24,6 +24,8 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 ## 🗓️ Quadro do Trello
 
 [Quadro do Trello](assets/quadroDoTrello.png)
+<img src="imagens/minha-imagem.png" alt="Quadro do Trello"/>
+
 - 🛠️ [Quadro do Projeto (Trello)](https://trello.com/b/dO0Dct2b/kant)
 
 ## 👤 Histórias do Usuário
