@@ -24,20 +24,17 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 ## 🗓️ Quadro do Trello
 
 ![Quadro do Trello](assets\quadroDoTrello.png)
+- 🛠️ [Quadro do Projeto (Trello)](#https://trello.com/b/dO0Dct2b/kant)
 
 ## 👤 Histórias do Usuário
 
 > Algumas histórias que guiaram o desenvolvimento do Popay:
 
 - **Cadastro de Despesas**
-![Cadastro de Despesas](assets\telaDeCadastroDespesas.png)
-
 - **Dashboard de Visualização Financeira**
-![Dashboard de Visualização Financeira](assets\dashboardDeVisualizaçãoFinanceira.png)
-
-- **Como**
-- **Como**
-- **Como**
+- **Análise de Gastos pela IA**
+- **Integração com Open Finance**
+- **Alertas de Gastos Acima da Média**
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -54,9 +51,10 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 
 ## 🔗 Links Úteis
 
-- 📂 [Protótipo no Figma](#)  
-- 🧪 [Drive](#)
-- 🛠️ [Quadro do Projeto (Trello)](#)  
+- 📂 [Protótipo no Figma](#https://www.figma.com/design/xW5kSDpCFAY1aso8I3pBcp/Prot%C3%B3tipo?node-id=0-1&t=6wwaZKyyYY2JTfe8-1)  
+- 🧪 [Drive](#https://drive.google.com/drive/u/0/folders/0AKdHeB0ZGGWqUk9PVA)
+- 🛠️ [Quadro do Projeto (Trello)](#https://trello.com/b/dO0Dct2b/kant)
+- 📽️ [Screencast](#)
 
 ## 👥 Equipe
 
