@@ -4,6 +4,8 @@
 
 ## 🧠 Sobre o Popay
 
+![Menu inicial](assets/menuInicial.jpg)
+
 Diante do aumento do endividamento entre os jovens, **Popay** surge como uma solução tecnológica para transformar a maneira como eles lidam com o dinheiro. Utilizando **Inteligência Artificial**, o sistema:
 
 - Analisa hábitos de consumo;
