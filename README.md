@@ -91,10 +91,6 @@ Você também pode ver erros de lint no console.
 <img src="assets/diagrama-cadastro.jpg" alt="Diagrama de atividades da funcionalidade" width="350"/>
       - Programador piloto: René Melo de Lucena
       - Programador copiloto: Ana Sofia da Silva Moura
-      
-  - História do usuário - Dashboard de vizualização financeira
-      - Programador piloto: Lucas Rodrigues da Silva Junior
-      - Programador copiloto: Camila Maria Teixeira Alcântara
 
   - História do usuário - Teste de perfil financeiro
     
