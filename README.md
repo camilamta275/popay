@@ -80,7 +80,7 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
       - Programador copiloto: Camila Maria Teixeira Alcântara
 
   - História do usuário - Teste de perfil financeiro
-      ![Diagrama de atividades da funcionalidade](assets/menuInicial.jpg)
+      ![Diagrama de atividades da funcionalidade](assets/testefinanceiro.jpg)
       - Programador piloto: Ana Sofia da Silva Moura  
       - Programador copiloto: Camila Maria Teixeira Alcântara
 
