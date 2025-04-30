@@ -5,18 +5,19 @@ const PopayDashboard = () => {
   return (
     <div className="dashboard-container">
       {/* Cabeçalho */}
-      <div className="menu">
-        <h1 class="menu-title"> PoPay </h1>
+      <header className="dashboard-header">
+        <h1>PoPay</h1>
         <div className="menu-options">
-          <span className="menu-link active">VISÃO GERAL</span>
-          <span className="menu-link">LANÇAMENTOS</span>
-          <span className="menu-link">RELATÓRIOS</span>
-          <span className="menu-link">METAS</span>
+          <span className="menu-active">VISÃO GERAL</span>
+          <span>LANÇAMENTOS</span>
+          <span>RELATÓRIOS</span>
+          <span>METAS</span>
         </div>
-      </div>
+      </header>
 
       <div className="divider"></div>
 
+      {/* Cartões Resumo */}
       <div className="summary-cards">
         <div className="summary-card">
           <h3>Boa noite, Kacey Musgraves!</h3>
@@ -48,106 +49,118 @@ const PopayDashboard = () => {
         </div>
       </div>
 
-      <div className="cards-grid">
-        <section className="card">
-          <h3>Muitas Contas</h3>
-          <p className="card-description">
-            Kacey, essas são suas próximas faturas. Se programa para não perder
-            o vencimento
-          </p>
-          <div className="card-items">
-            <div className="card-item">
-              <span>20/03/2025</span>
-              <span>R$ 300,00</span>
+      {/* Próximas Faturas */}
+      <section className="card-warning">
+        <h3>
+          Kacey, essas são suas próximas faturas.
+          <br />
+          Programe-se para não perder o vencimento.
+        </h3>
+        <div className="card-warning-items">
+          <div className="card-warning-item">
+            <div>
+              <strong>Fatura Nubank</strong>
+              <br />
+              <span className="due-date">20/03/2025</span>
             </div>
-            <div className="card-item">
-              <span>20/03/2025</span>
-              <span>R$ 300,00</span>
-            </div>
+            <div className="amount">R$ 600,00</div>
           </div>
-        </section>
-
-        {/* Minhas Contas */}
-        <section className="card">
-          <h3>Minhas Contas</h3>
-          <div className="card-items">
-            <div className="card-item">
-              <span>NuConta</span>
-              <span>R$ 1.200</span>
+          <div className="card-warning-item">
+            <div>
+              <strong>Fatura Banco do Brasil</strong>
+              <br />
+              <span className="due-date">20/03/2025</span>
             </div>
-            <div className="card-item">
-              <span>BANCO CAIXA </span>
-              <span>R$ 1.200</span>
+            <div className="amount">R$ 100,00</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Minhas Contas */}
+      <section className="accounts-section">
+        <h3>Minhas Contas</h3>
+        <div className="accounts-list">
+          <div className="account-item">
+            <div>
+              <strong>NuConta</strong>
+              <br />
+              <span>conta corrente</span>
             </div>
+            <div className="account-value">R$ 1.200,03</div>
           </div>
-        </section>
-
-        {/* Carteira */}
-        <section className="card">
-          <h3>Calça</h3>
-          <div className="card-item wallet-item">
-            <span></span>
-            <span className="wallet-value">R$ 1.000,00</span>
+          <div className="account-item">
+            <div>
+              <strong>CAIXA</strong>
+              <br />
+              <span>conta poupança</span>
+            </div>
+            <div className="account-value">R$ 1.200,03</div>
           </div>
-        </section>
+          <div className="account-item">
+            <div>
+              <strong>Banco do Brasil</strong>
+              <br />
+              <span>conta corrente</span>
+            </div>
+            <div className="account-value">R$ 1.200,03</div>
+          </div>
+          <div className="account-item">
+            <div>
+              <strong>Banco Itaú</strong>
+              <br />
+              <span>conta poupança</span>
+            </div>
+            <div className="account-value">R$ 1.200,03</div>
+          </div>
+        </div>
+      </section>
 
+      {/* Maiores Gastos + Metas de Abril lado a lado */}
+      <section className="card-row">
         {/* Maiores Gastos */}
-        <section className="card">
-          <h3>Kacey, aqui está os seus maiores gastos dos últimos 30 dias</h3>
+        <div className="card card-gastos">
+          <h3>Kacey, aqui estão seus maiores gastos dos últimos 30 dias</h3>
           <div className="card-items">
             <div className="card-item">
               <span>Alimentação</span>
-              <span>R$ 24,00</span>
+              <span>R$ 1.200,03</span>
             </div>
             <div className="card-item">
-              <span>Streamings</span>
-              <span>R$ 24,00</span>
+              <span>Saúde</span>
+              <span>R$ 1.200,03</span>
+            </div>
+            <div className="card-item">
+              <span>Saídas aos finais de semana</span>
+              <span>R$ 1.200,03</span>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Metas de Abril */}
-        <section className="card">
+        <div className="card card-metas">
           <h3>Metas de Abril</h3>
           <div className="card-items">
             <div className="card-item">
-              <span>Alimentação</span>
-              <span>R$ 24,00</span>
+              <div>
+                <div>Alimentação</div>
+                <div>Meta: R$ 300,00</div>
+                <div>Gasto: R$ 200,00</div>
+              </div>
             </div>
             <div className="card-item">
-              <span>Alimentação</span>
-              <span>R$ 24,00</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Serviço */}
-        <section className="card">
-          <h3>Metas de Abril de forma de serviço</h3>
-          <div className="card-items">
-            <div className="card-item">
-              <span>Alimentação</span>
-              <span>R$ 24,00</span>
+              <div>
+                <div>Saídas aos finais de semana</div>
+                <div>Meta: R$ 300,00</div>
+                <div>Gasto: R$ 200,00</div>
+              </div>
             </div>
             <div className="card-item">
-              <span>Alimentação</span>
-              <span>R$ 24,00</span>
+              <div>
+                <div>Assinaturas com streaming</div>
+                <div>Meta: R$ 300,00</div>
+                <div>Gasto: R$ 200,00</div>
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
-
-      {/* Atendimento */}
-      <section className="card">
-        <h3>Atendimento com:</h3>
-        <div className="card-items">
-          <div className="card-item">
-            <span>Alimentação</span>
-            <span>R$ 24,00</span>
-          </div>
-          <div className="card-item">
-            <span>Alimentação</span>
-            <span>R$ 24,00</span>
           </div>
         </div>
       </section>

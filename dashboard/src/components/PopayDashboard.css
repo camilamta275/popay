@@ -1,72 +1,25 @@
 /* Estilos gerais */
 .dashboard-container {
   min-height: 100vh;
-  background-color: #fcfcfd;
+  background-color: #2e7d32;
   padding: 1rem;
-  font-family: Inter bold, sans-serif;
+  font-family: "Inter", sans-serif;
+  color: white;
 }
 
 /* Cabeçalho */
-.menu {
-  position: fixed;
-  top: 2;
-  left: 0;
-  right: 0;
-  height: 60px;
-  padding: 0 20px;
+.dashboard-header {
+  margin-bottom: 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 40px 40px 40px 40px;
-  z-index: 999;
-}
-
-
-.menu-title {
-  color: var(--white);
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.menu-options {
-  display: flex;
-  gap: 20px;
-}
-
-.menu-link {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  border-radius: 8px;
-  color: #000;
-  font-size: 16px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.menu-link.active {
-  background-color: var(--blue);
-}
-
-.menu-link:hover {
-  background-color: var(--black);
 }
 
 .dashboard-header h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
-  color: #fcfffc;
-  margin-bottom: 0.5rem;
-}
-
-.app-title {
-  font-size: 1.25rem;
-  font-weight: 600;
   color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
 .menu-options {
@@ -74,119 +27,109 @@
   gap: 1rem;
   margin-top: 0.5rem;
   font-size: 0.875rem;
-  align-items: center;
-  color: white;
 }
 
 .menu-options span {
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .menu-active {
-  font-weight: 500;
+  font-weight: 600;
+  opacity: 1;
+  text-decoration: underline;
 }
 
-/* Cards */
-.card {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
+.divider {
+  border-top: 1px solid #a5d6a7;
+  margin: 1rem 0;
 }
 
-/* Seção de saudação */
-.greeting-card {
+/* Cards principais (resumo) */
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 2rem;
-}
-
-.greeting-section h3 {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.income-section {
-  display: flex;
   align-items: center;
-  margin-top: 0.5rem;
+  justify-content: center;
 }
 
-.income-value {
-  color: #16a34a;
-  font-weight: 500;
+.summary-card {
+  background-color: #1b5e20;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  width: 230px;
 }
 
-.expense-text {
-  font-size: 0.875rem;
-  color: #6b7280;
-  margin: 0.5rem 0;
-}
-
-.expense-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.expense-value {
-  color: #dc2626;
-  font-weight: 500;
-}
-
-.balance-section {
-  background-color: #eff6ff;
+.value-box {
+  margin-top: 1rem;
   padding: 0.75rem;
   border-radius: 0.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-.balance-total {
-  font-weight: bold;
-  font-size: 1.125rem;
+.value-income {
+  background-color: #2e7d32;
+  color: #a5d6a7;
+}
+
+.value-expense {
+  background-color: #b71c1c;
+  color: #ffcdd2;
 }
 
 .report-button {
-  color: #2563eb;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-  background: none;
+  margin-top: 1rem;
+  background-color: #388e3c;
   border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
+  width: 100%;
+  font-size: 0.875rem;
 }
 
 /* Acesso rápido */
-.quick-access {
-  margin-bottom: 1.5rem;
-}
-
 .quick-access h3 {
   font-weight: 500;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .quick-access-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .quick-button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
   border: none;
   cursor: pointer;
   color: white;
+  flex: 1 1 100px;
+  max-width: 150px;
+  text-align: center;
 }
 
 .register-button {
-  background-color: #dc2626;
+  background-color: #c62828;
 }
 
 .income-button {
-  background-color: #16a34a;
+  background-color: #66bb6a;
 }
 
-/* Grid de cards */
+/* Grid dos cards secundários */
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -200,7 +143,19 @@
   }
 }
 
-/* Itens dos cards */
+.card {
+  background-color: #1b5e20;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: #c8e6c9;
+  margin: 0.5rem 0;
+}
+
 .card-items {
   display: flex;
   flex-direction: column;
@@ -211,78 +166,98 @@
 .card-item {
   display: flex;
   justify-content: space-between;
+  background-color: #2e7d32;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.wallet-item {
-  align-items: center;
+/* Próximas Faturas */
+.card-warning {
+  background-color: #1b5e20;
+  color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 }
 
-.wallet-value {
+.card-warning h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
   font-weight: bold;
 }
 
-.card-description {
-  font-size: 0.875rem;
-  color: #6b7280;
-  margin: 0.5rem 0;
-}
-/* Container dos cartões de saudação e resumo */
-.summary-cards {
+.card-warning-items {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: space-between;
-  background-color: #2e7d32;
-  padding: 1rem;
-  border-radius: 0.5rem;
 }
 
-/* Cada cartão */
-.summary-card {
-  background-color: #388e3c;
-  color: white;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  flex: 1;
-  min-width: 220px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Título */
-.summary-card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-/* Destaques de valores */
-.summary-card .value-box {
-  background-color: #2e7d32;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
-
-.value-income {
-  color: #ffffff;
-}
-
-.value-expense {
-  color: #fefefe;
-}
-
-.report-button {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #66bb6a;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
+.card-warning-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  background-color: #388e3c;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
 }
+
+/* Seção Minhas Contas */
+.accounts-section {
+  background-color: #114e0f;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+.accounts-section h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.accounts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.account-item {
+  background-color: #4b8a4b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.875rem;
+  min-height: 100px;
+}
+
+.account-value {
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+/* Maiores Gastos + Metas de Abril */
+.card-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-gastos,
+.card-metas {
+  flex: 1;
+  min-width: 600px;
+}
+
+
