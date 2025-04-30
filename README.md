@@ -72,7 +72,7 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 **Programação em Par**:
 
   - História do usuário - Cadastro de Despesas
-<img src="assets/testefinanceiro.jpg" alt="Diagrama de atividades da funcionalidade" width="350"/>
+<img src="assets/diagrama-cadastro.jpg" alt="Diagrama de atividades da funcionalidade" width="350"/>
       - Programador piloto: René Melo de Lucena
       - Programador copiloto: Ana Sofia da Silva Moura
       
