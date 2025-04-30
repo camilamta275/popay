@@ -6,6 +6,7 @@ import AccountSelect from "../AccountSelect/AccountSelect";
 import DescriptionInput from "../DescriptionInput/DescriptionInput";
 import CategorySelect from "../CategorySelect/CategorySelectTemp";
 import SaveButton from "../SaveButton/SaveButton";
+import styles from "../../styles/formStyles.module.css";
 
 const MovementForm = () => {
   const [movementType, setMovementType] = useState<MovementType>("entrada");
@@ -25,7 +26,8 @@ const MovementForm = () => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     console.log("Movimentação salva!");
   };
 
@@ -37,22 +39,47 @@ const MovementForm = () => {
     date !== "";
 
   return (
-    <form onSubmit={handleSubmit}>
-      <EntryExitToggle value={movementType} onChange={setMovementType} />
-      <ValueInput value={value} onChange={setValue} />
-      <AccountSelect
-        accounts={accounts}
-        selectedAccountId={selectedAccount}
-        onChange={setSelectedAccount}
-      />
-      <DescriptionInput description={description} onChange={setDescription} />{" "}
-      <CategorySelect
-        categories={categories}
-        selectedCategoryId={selectedCategory}
-        onChange={setSelectedCategory}
-      />
-      <SaveButton disabled={!isFormValid} />
-    </form>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h2 className={styles.title}>Cadastrar movimentação</h2>
+        <form onSubmit={handleSubmit}>
+          <div className={styles.toggleButtonGroup}>
+            <EntryExitToggle value={movementType} onChange={setMovementType} />
+          </div>
+
+          <div className={styles.row}>
+            <div className={styles.column}>
+              <label className={styles.label}>Valor</label>
+              <ValueInput value={value} onChange={setValue} />
+            </div>
+            <div className={styles.column}>
+              <label className={styles.label}>Conta Bancária</label>
+              <AccountSelect
+                accounts={accounts}
+                selectedAccountId={selectedAccount}
+                onChange={setSelectedAccount}
+              />
+            </div>
+          </div>
+
+          <div className={styles.inputGroup}>
+            <label className={styles.label}>Descrição</label>
+            <DescriptionInput description={description} onChange={setDescription} />
+          </div>
+
+          <div className={styles.inputGroup}>
+            <label className={styles.label}>Categoria</label>
+            <CategorySelect
+              categories={categories}
+              selectedCategoryId={selectedCategory}
+              onChange={setSelectedCategory}
+            />
+          </div>
+
+          <SaveButton disabled={!isFormValid} className={styles.saveButton} />
+        </form>
+      </div>
+    </div>
   );
 };
 

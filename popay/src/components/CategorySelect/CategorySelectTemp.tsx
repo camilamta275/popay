@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './CategorySelect.module.css';
 
+
 interface Category {
   id: string;
   name: string;
