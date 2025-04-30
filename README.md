@@ -81,7 +81,7 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 
   - História do usuário - Teste de perfil financeiro
     
-     <img src="assets/testefinanceiro.jpg" alt="Diagrama de atividades da funcionalidade" width="400"/>
+     <img src="assets/testefinanceiro.jpg" alt="Diagrama de atividades da funcionalidade" width="500"/>
      
       - Programador piloto: Ana Sofia da Silva Moura  
       - Programador copiloto: Camila Maria Teixeira Alcântara
