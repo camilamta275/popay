@@ -74,7 +74,10 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 
 O diretório do projeto, você pode executar:
 
-
+Instalar todas as dependências de um projeto
+Se o projeto já tem um arquivo package.json, basta rodar:
+**npm install**
+Ele instalará todas as dependências listadas em package.json.
 
 **npm start**
 Executa o aplicativo em modo de desenvolvimento.
