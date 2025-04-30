@@ -65,3 +65,22 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 - Camila Maria Teixeira Alcântara
 - Lucas Rodrigues da Silva Junior
 - René Melo de Lucena
+
+
+## Sprint 1 ♾️
+
+**Programação em Par**:
+
+  -História do usuário - Cadastro de Despesas
+      Programador piloto: René Melo de Lucena
+      Programador copiloto: Ana Sofia da Silva Moura
+      
+  -História do usuário - Dashboard de vizualização financeira
+      Programador piloto: Lucas Rodrigues da Silva Junior
+      Programador copiloto: Camila Maria Teixeira Alcântara
+
+  -História do usuário - Teste de perfil financeiro
+      Programador piloto: Ana Sofia da Silva Moura  
+      Programador copiloto: Camila Maria Teixeira Alcântara
+
+    
