@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import './App.css';
+import { Container, Card, Button, Typography, LinearProgress, Box, AppBar, Toolbar, IconButton } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 
 
 const questions = [
@@ -184,32 +188,30 @@ const questions = [
   },
 ];
 
-
 const results = {
   Q: {
     title: "Descontrolado",
-    description: "Você vive o presente com intensidade, mas precisa cuidar melhor das finanças para evitar sufocos."
+    description: "Você vive o presente com intensidade, aproveita oportunidades e não gosta de perder momentos. No entanto, essa impulsividade pode te levar a gastar mais do que ganha, ignorar orçamentos e entrar em dívidas frequentes. Para melhorar sua relação com o dinheiro, é importante adotar hábitos de controle financeiro, como registrar gastos, definir metas e criar uma reserva de emergência. Com um pouco de disciplina, você pode manter seu estilo de vida sem comprometer o futuro."
   },
   W: {
     title: "Conservador",
-    description: "Você prefere segurança e evita riscos. Isso é bom, mas vale equilibrar com planejamento a longo prazo."
+    description: "Você preza pela segurança e prefere manter o dinheiro guardado a correr riscos. Gosta de estabilidade, evita dívidas e geralmente opta por investimentos tradicionais e de baixo risco. Apesar da cautela ser uma qualidade, ela pode impedir seu dinheiro de crescer com mais eficiência. Para avançar, vale considerar um planejamento financeiro que combine segurança com rentabilidade a longo prazo, explorando novas possibilidades de forma gradual e consciente."
   },
   E: {
     title: "Poupador",
-    description: "Você tem foco no futuro e se protege contra imprevistos. Pode evoluir explorando investimentos mais rentáveis."
+    description: "Você tem disciplina, organiza bem seus gastos e se protege contra imprevistos. Acumular e economizar é parte natural do seu comportamento, o que traz tranquilidade em momentos difíceis. No entanto, pode haver um certo receio de arriscar e fazer o dinheiro render mais. Para evoluir financeiramente, vale estudar opções de investimentos mais estratégicos, que estejam alinhados ao seu perfil e objetivos de longo prazo."
   },
   R: {
     title: "Investidor",
-    description: "Você pensa estrategicamente, busca crescer e faz escolhas inteligentes com o dinheiro."
+    description: "Você enxerga o dinheiro como uma ferramenta de crescimento e liberdade. Costuma fazer escolhas conscientes, estuda o mercado e busca oportunidades de aumentar seu patrimônio. Tem um perfil estratégico, define metas claras e sabe equilibrar riscos com retorno. Esse comportamento demonstra maturidade financeira e um bom domínio sobre suas decisões. O desafio pode estar em manter o foco no propósito e não perder de vista o equilíbrio entre viver o presente e planejar o futuro."
   }
-};
 
+};
 
 const QuizFinanceiro = () => {
   const [current, setCurrent] = useState(0);
   const [scores, setScores] = useState({ Q: 0, W: 0, E: 0, R: 0 });
   const [finished, setFinished] = useState(false);
-
 
   const handleAnswer = (type) => {
     setScores(prev => ({ ...prev, [type]: prev[type] + 1 }));
@@ -220,38 +222,91 @@ const QuizFinanceiro = () => {
     }
   };
 
-
   const getResult = () => {
     const max = Math.max(...Object.values(scores));
     const personality = Object.keys(scores).find(key => scores[key] === max);
     return results[personality];
   };
 
-
   return (
-    <div className="quiz-container">
-      {!finished ? (
-        <div className="card">
-          <h2 className="question">{questions[current].question}</h2>
-          <div className="options">
-            {questions[current].answers.map((ans, index) => (
-              <button key={index} onClick={() => handleAnswer(ans.type)} className="option">
-                {ans.text}
-              </button>
-            ))}
-          </div>
-          <p className="progress">Pergunta {current + 1} de {questions.length}</p>
-        </div>
-      ) : (
-        <div className="card">
-          <h2 className="result-title">Sua Personalidade Financeira:</h2>
-          <h3>{getResult().title}</h3>
-          <p>{getResult().description}</p>
-        </div>
-      )}
-    </div>
+    <>
+      <AppBar position="static" sx={{ backgroundColor: 'rgb(51, 102, 0)' }}>
+        <Toolbar>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>Popay</Typography>
+          <Box sx={{ flexGrow: 0 }}>
+      <img
+        src="/assets/profilePic.jpg"
+        alt="Imagem circular"
+        style={{
+          width: 40,
+          height: 40,
+          borderRadius: "50%",
+          objectFit: "cover"
+        }}
+      />
+    </Box>
+
+      </Toolbar>
+
+      </AppBar>
+      <Container maxWidth="sm" sx={{ mt: 4 }}>
+        <Card sx={{ padding: 4, backgroundColor: 'rgb(250, 250, 250)', borderRadius: 10, boxShadow: 6 }}>
+          {!finished ? (
+            <Box>
+              <Typography variant="h5" fontWeight="bold" gutterBottom>
+                {questions[current].question}
+              </Typography>
+              <Box display="flex" flexDirection="column" gap={2}>
+                {questions[current].answers.map((ans, index) => (
+                  <Button
+                    key={index}
+                    variant="contained"
+                    onClick={() => handleAnswer(ans.type)}
+                    sx={{ padding: 2,borderRadius: 4, backgroundColor: 'rgb(60, 136, 32)', color: '#fff', '&:hover': { backgroundColor: 'rgb(31, 68, 18)' } }}
+                  >
+                    {ans.text}
+                  </Button>
+                ))}
+              </Box>
+              <Typography variant="body2" align="right" mt={2}>
+                Pergunta {current + 1} de {questions.length}
+              </Typography>
+              {current > 0 && !finished && (
+            <IconButton edge="end" color="inherit" onClick={() => setCurrent(current - 1)}>
+              <ArrowBackIcon />
+            </IconButton>
+          )}
+              <LinearProgress variant="determinate" value={((current + 1) / questions.length) * 100} sx={{ mt: 1, height: 10, backgroundColor: 'rgb(224, 224, 224)' }} />
+            </Box>
+          ) : (
+            <Box textAlign="center">
+              <Typography variant="h4" color="rgb(51, 102, 0)" fontWeight="bold" gutterBottom>
+                Sua Personalidade Financeira:
+              </Typography>
+              <Box sx={{ flexGrow: 0 }}>
+      <img
+        src="/assets/profilePic.jpg"
+        alt="Imagem circular"
+        style={{
+          width: 100,
+          height: 100,
+          borderRadius: "50%",
+          objectFit: "cover"
+        }}
+      />
+    </Box>
+              <Typography variant="h5" fontWeight="bold" color="rgb(0, 153, 204)" gutterBottom>
+                {getResult().title}
+              </Typography>
+              <Typography variant="body1" color="rgb(0, 0, 0)">
+                {getResult().description}
+              </Typography>
+            </Box>
+          )}
+        </Card>
+      </Container>
+    </>
   );
 };
-
 
 export default QuizFinanceiro;
