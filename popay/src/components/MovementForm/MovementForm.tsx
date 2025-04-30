@@ -49,11 +49,9 @@ const MovementForm = () => {
 
           <div className={styles.row}>
             <div className={styles.column}>
-              <label className={styles.label}>Valor</label>
               <ValueInput value={value} onChange={setValue} />
             </div>
             <div className={styles.column}>
-              <label className={styles.label}>Conta Bancária</label>
               <AccountSelect
                 accounts={accounts}
                 selectedAccountId={selectedAccount}
@@ -63,12 +61,10 @@ const MovementForm = () => {
           </div>
 
           <div className={styles.inputGroup}>
-            <label className={styles.label}>Descrição</label>
             <DescriptionInput description={description} onChange={setDescription} />
           </div>
 
           <div className={styles.inputGroup}>
-            <label className={styles.label}>Categoria</label>
             <CategorySelect
               categories={categories}
               selectedCategoryId={selectedCategory}
@@ -76,7 +72,7 @@ const MovementForm = () => {
             />
           </div>
 
-          <SaveButton disabled={!isFormValid} className={styles.saveButton} />
+          <SaveButton disabled={isFormValid} className={styles.saveButton} />
         </form>
       </div>
     </div>

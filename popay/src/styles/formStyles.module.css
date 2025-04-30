@@ -3,12 +3,12 @@
     justify-content: center;
     align-items: center;
     padding: 3rem;
-    background-color: #1c6b30; /* verde escuro de fundo */
+    background-color: #2E7D32; /* verde escuro de fundo */
     min-height: 100vh;
   }
   
   .card {
-    background-color: #267c3b; /* verde médio */
+    background-color: #346d36; /* verde médio */
     border-radius: 16px;
     padding: 2rem;
     max-width: 600px;

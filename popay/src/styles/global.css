@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  #root {
+    width: 100%;
+  }
   
   body {
     background-color: white;

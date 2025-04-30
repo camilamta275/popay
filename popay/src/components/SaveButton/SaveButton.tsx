@@ -3,6 +3,7 @@ import styles from './SaveButton.module.css';
 
 interface SaveButtonProps {
   disabled?: boolean;
+  className?: string;
 }
 
 const SaveButton: React.FC<SaveButtonProps> = ({ disabled = false }) => {
