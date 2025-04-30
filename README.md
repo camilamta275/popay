@@ -68,6 +68,20 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 - Lucas Rodrigues da Silva Junior
 - René Melo de Lucena
 
+## Instruções 📂
+
+> Instruções para rodar no seu ambiente de desenvolvimento
+
+O diretório do projeto, você pode executar:
+
+
+
+**npm start**
+Executa o aplicativo em modo de desenvolvimento.
+Abra http://localhost:3000 para visualizá-lo no seu navegador.
+
+A página será recarregada quando você fizer alterações.
+Você também pode ver erros de lint no console.
 
 ## Sprint 1 ♾️
 
