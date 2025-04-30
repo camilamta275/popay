@@ -5,15 +5,15 @@ const PopayDashboard = () => {
   return (
     <div className="dashboard-container">
       {/* Cabeçalho */}
-      <header className="dashboard-header">
-        <h1> PoPay </h1>
+      <div className="menu">
+        <h1 class="menu-title"> PoPay </h1>
         <div className="menu-options">
-          <span className="menu-active">VISÃO GERAL</span>
-          <span>LANÇAMENTOS</span>
-          <span>RELATÓRIOS</span>
-          <span>METAS</span>
+          <span className="menu-link active">VISÃO GERAL</span>
+          <span className="menu-link">LANÇAMENTOS</span>
+          <span className="menu-link">RELATÓRIOS</span>
+          <span className="menu-link">METAS</span>
         </div>
-      </header>
+      </div>
 
       <div className="divider"></div>
 
