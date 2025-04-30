@@ -85,5 +85,21 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
      
       - Programador piloto: Ana Sofia da Silva Moura  
       - Programador copiloto: Camila Maria Teixeira Alcântara
-
-    
+   
+        **Issue Tracker – Projeto TesteFinanceiro**
+        
+        - 1. Erro: npm ERR! JSON.parse ao instalar dependências
+        Descrição: O comando npm install @mui/material @emotion/react @emotion/styled gerou um erro de JSON.parse.
+        
+        Causa: O arquivo package.json estava corrompido (quebra de linha inesperada na linha 40).
+        
+        Solução: Corrigido manualmente o package.json, deixando ele com a estrutura correta e válida em JSON.
+        
+        - 2. Falta do package.json original
+        Descrição: O package.json foi apagado ou substituído por um incompleto.
+        
+        Causa: Perda acidental do arquivo durante tentativa de instalar dependências.
+        
+        Solução: Foi recriado manualmente com base nas dependências que restaram. Depois foi rodado npm install para reinstalar os pacotes.
+        
+            
