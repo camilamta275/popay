@@ -13,7 +13,7 @@ function PopayDashboard() {
   return (
     <div className="dashboard-container">
       {/* Cabeçalho */}
-      <header className="dashboard-header">
+      <header className="navbar">
         <h1>PoPay</h1>
         <div className="menu-options">
           <span className="menu-active">VISÃO GERAL</span>

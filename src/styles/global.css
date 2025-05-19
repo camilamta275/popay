@@ -1,27 +1,31 @@
-.App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-  #root {
-    width: 100%;
-  }
-  
-  body {
-    background-color: white;
-    color: black;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  body, input, textarea, button {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      font-size: 1rem;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F5F5DC;
+  color: #2E7D32;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+}
+
+input, textarea, button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.App {
+  text-align: center;
+}
