@@ -1,0 +1,91 @@
+:root {
+  --verde-escuro: #2E7D32;
+  --verde-claro: #8BC34A;
+  --bege: #F5F5DC;
+  --cinza-claro: #F8F9FA;
+  --verde-limao: #64DD17;
+}
+
+.account-settings-container {
+  background-color: var(--cinza-claro);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.account-card {
+  background-color: var(--bege);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.account-card h2 {
+  color: var(--verde-escuro);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.account-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.save-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--verde-limao);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover {
+  background-color: var(--verde-escuro);
+}
+
+.delete-button {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: red;
+  border: 2px solid red;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.erro-mensagem {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.erro-input {
+  border: 2px solid red;
+}

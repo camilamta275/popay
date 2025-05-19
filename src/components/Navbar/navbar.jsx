@@ -13,6 +13,14 @@ function Navbar() {
     navigate('/');
   };
 
+  const irParaIntroQuiz = () => {
+    navigate('/introQuiz');
+  };
+
+    const irParaConfiguracoes = () => {
+    navigate('/conta');
+  };
+
   return (
     <>
       {/* Cabeçalho */}
@@ -20,9 +28,9 @@ function Navbar() {
         <h1 onClick={irParaDashboard} style={{ cursor: 'pointer' }}>PoPay</h1>
         <div className="menu-options">
           <span onClick={irParaDashboard}>VISÃO GERAL</span>
-          <span onClick={irParaCadastro}>LANÇAMENTOS</span>
-          <span>RELATÓRIOS</span>
-          <span>METAS</span>
+          <span onClick={irParaCadastro}>CADASTRO</span>
+          <span onClick={irParaIntroQuiz}>QUIZ</span>
+          <span onClick={irParaConfiguracoes}>CONTA</span>
         </div>
       </header>
 
