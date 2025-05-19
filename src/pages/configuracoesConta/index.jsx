@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import Navbar from 'src/components/Navbar/navbar.jsx';
 
 function AccountSettings() {
   const [nome, setNome] = useState('');
@@ -24,52 +25,60 @@ function AccountSettings() {
   };
 
   const handleDeleteAccount = () => {
-    const confirmar = window.confirm("Tem certeza que deseja excluir sua conta?");
+    const confirmar = window.confirm('Tem certeza que deseja excluir sua conta?');
     if (confirmar) {
       alert('Conta excluída.');
     }
   };
 
   return (
-    <div className="account-settings-container">
-      <div className="account-card">
-        <h2>Configurações da Conta</h2>
+    <>
+      <Navbar />
+      <div className="account-settings-container">
+        <div className="account-card">
+          <h2>Configurações da Conta</h2>
 
-        <label>Nome</label>
-        <input
-          type="text"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-        />
+          <label htmlFor="nome">Nome</label>
+          <input
+            id="nome"
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
 
-        <label>E-mail</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            if (erroEmail) setErroEmail('');
-          }}
-          className={erroEmail ? 'erro-input' : ''}
-        />
-        {erroEmail && <p className="erro-mensagem">{erroEmail}</p>}
+          <label htmlFor="email">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (erroEmail) setErroEmail('');
+            }}
+            className={erroEmail ? 'erro-input' : ''}
+          />
+          {erroEmail && <p className="erro-mensagem">{erroEmail}</p>}
 
-        <label>Nova Senha</label>
-        <input
-          type="password"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-        />
+          <label htmlFor="senha">Nova Senha</label>
+          <input
+            id="senha"
+            type="password"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
 
-        <button className="save-button" onClick={handleSave}>
-          Salvar Alterações
-        </button>
-        <hr />
-        <button className="delete-button" onClick={handleDeleteAccount}>
-          Excluir Conta
-        </button>
+          <button className="save-button" onClick={handleSave}>
+            Salvar Alterações
+          </button>
+
+          <hr />
+
+          <button className="delete-button" onClick={handleDeleteAccount}>
+            Excluir Conta
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   const irParaDashboard = () => {
-    navigate('/');
+    navigate('/dashboard');
   };
 
   const irParaIntroQuiz = () => {

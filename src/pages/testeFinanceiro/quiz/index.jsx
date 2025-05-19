@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import 'src/pages/testeFinanceiro/style.css';
 import { Container, Card, Button, Typography, LinearProgress, Box, AppBar, Toolbar, IconButton } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
+import Navbar from "src/components/Navbar/navbar.jsx";
 
 
 const questions = [
@@ -231,7 +231,7 @@ const QuizFinanceiro = () => {
 
   return (
     <>
-
+        <Navbar />
       <Container maxWidth="sm" sx={{ mt: 4 }}>
         <Card sx={{ padding: 4, backgroundColor: 'rgb(250, 250, 250)', borderRadius: 10, boxShadow: 6 }}>
           {!finished ? (

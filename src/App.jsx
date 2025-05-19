@@ -7,15 +7,17 @@ import QuizFinanceiro from './pages/testeFinanceiro/quiz';
 import IntroQuiz from './pages/testeFinanceiro/intro';
 import Configuracoes from './pages/configuracoesConta';
 import LoginContas from './pages/loginConta';
+import LandingPage from './pages/landingPages/index.jsx';
 
 function App() {
   const [started, setStarted] = useState(false);
 
   return (
     <BrowserRouter>
-      <Navbar />
+      
       <Routes>
-        <Route path="/" element={<DashboardFinanceiro />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<DashboardFinanceiro />} />
         <Route path="/cadastro" element={<CadastroDespesas />} />
         <Route path="/conta" element={<Configuracoes />} />
         <Route path="/introQuiz" element={<IntroQuiz />} />

@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
-const loginConta = () => {
+function LoginConta() {
+    const navigate = useNavigate();
+  
+    const irParaDashboard = () => {
+      navigate('/dashboard');
+    };
+
   const [isRegistering, setIsRegistering] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -37,12 +43,17 @@ const loginConta = () => {
   const handleRegister = () => {
     const { username, password, confirmPassword, cpf, birthdate } = form;
 
-    if (!username || !password || !confirmPassword || !cpf || !birthdate) return;
+    if (!username || !password || !confirmPassword || !cpf || !birthdate) {
+      alert("Preencha todos os campos.");
+      return;
+    }
 
-    if (password !== confirmPassword) return;
+    if (password !== confirmPassword) {
+      alert("As senhas não coincidem.");
+      return;
+    }
 
     const usuarios = JSON.parse(localStorage.getItem(usersKey)) || [];
-
     usuarios.push({ username, password, cpf, birthdate });
 
     localStorage.setItem(usersKey, JSON.stringify(usuarios));
@@ -57,20 +68,17 @@ const loginConta = () => {
 
     const found = usuarios.find((u) => u.username === username && u.password === password);
     if (found) {
-      setIsLoggedIn(true);
+      // ✅ Redireciona após login
+      navigate("/dashboard");
     } else {
       alert("Usuário ou senha inválidos.");
     }
   };
 
-  if (isLoggedIn) {
-    return <div className="success-container">Login realizado com sucesso!</div>;
-  }
-
   return (
     <div className="login-container">
       <div className="login-box">
-        <div className="titulo">Login</div>
+        <div className="titulo">{isRegistering ? "Cadastro" : "Login"}</div>
 
         <div className="input-field">
           <label>Usuário</label>
@@ -138,6 +146,6 @@ const loginConta = () => {
       </div>
     </div>
   );
-};
+}
 
-export default loginConta;
+export default LoginConta;

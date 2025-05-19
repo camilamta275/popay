@@ -6,11 +6,11 @@ import DescriptionInput from "src/components/DescriptionInput/DescriptionInput.j
 import CategorySelect from "src/components/CategorySelect/CategorySelectTemp.jsx";
 import SaveButton from "src/components/SaveButton/SaveButton.jsx";
 import styles from "src/styles/formStyles.module.css";
-
+import Navbar from "src/components/Navbar/navbar.jsx";
 
 console.log("index.jsx funcionando");
 
-const MovementForm = () => {
+function MovementForm() {
   const [movementType, setMovementType] = useState("entrada");
   const [value, setValue] = useState("");
   const [selectedAccount, setSelectedAccount] = useState("");
@@ -39,47 +39,50 @@ const MovementForm = () => {
     description.trim() !== "";
 
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
-        <h2 className={styles.title}>Cadastrar movimentação</h2>
-        <form onSubmit={handleSubmit}>
-          <div className={styles.toggleButtonGroup}>
-            <EntryExitToggle value={movementType} onChange={setMovementType} />
-          </div>
-
-          <div className={styles.row}>
-            <div className={styles.column}>
-              <ValueInput value={value} onChange={setValue} />
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.card}>
+          <h2 className={styles.title}>Cadastrar movimentação</h2>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.toggleButtonGroup}>
+              <EntryExitToggle value={movementType} onChange={setMovementType} />
             </div>
-            <div className={styles.column}>
-              <AccountSelect
-                accounts={accounts}
-                selectedAccountId={selectedAccount}
-                onChange={setSelectedAccount}
+
+            <div className={styles.row}>
+              <div className={styles.column}>
+                <ValueInput value={value} onChange={setValue} />
+              </div>
+              <div className={styles.column}>
+                <AccountSelect
+                  accounts={accounts}
+                  selectedAccountId={selectedAccount}
+                  onChange={setSelectedAccount}
+                />
+              </div>
+            </div>
+
+            <div className={styles.inputGroup}>
+              <DescriptionInput
+                description={description}
+                onChange={setDescription}
               />
             </div>
-          </div>
 
-          <div className={styles.inputGroup}>
-            <DescriptionInput
-              description={description}
-              onChange={setDescription}
-            />
-          </div>
+            <div className={styles.inputGroup}>
+              <CategorySelect
+                categories={categories}
+                selectedCategoryId={selectedCategory}
+                onChange={setSelectedCategory}
+              />
+            </div>
 
-          <div className={styles.inputGroup}>
-            <CategorySelect
-              categories={categories}
-              selectedCategoryId={selectedCategory}
-              onChange={setSelectedCategory}
-            />
-          </div>
-
-          <SaveButton disabled={!isFormValid} className={styles.saveButton} />
-        </form>
+            <SaveButton disabled={!isFormValid} className={styles.saveButton} />
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default MovementForm;
