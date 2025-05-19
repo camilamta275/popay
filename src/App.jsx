@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/navbar.jsx';
 import QuizFinanceiro from './pages/testeFinanceiro/quiz';
 import IntroQuiz from './pages/testeFinanceiro/intro';
 import Configuracoes from './pages/configuracoesConta';
+import LoginContas from './pages/loginConta';
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -19,6 +20,7 @@ function App() {
         <Route path="/conta" element={<Configuracoes />} />
         <Route path="/introQuiz" element={<IntroQuiz />} />
         <Route path="/quiz" element={<QuizFinanceiro />} />
+        <Route path="/login" element={<LoginContas />} />
       </Routes>
     </BrowserRouter>
   );

@@ -21,6 +21,10 @@ function Navbar() {
     navigate('/conta');
   };
 
+    const irParaLogin = () => {
+    navigate('/login');
+  };
+
   return (
     <>
       {/* Cabeçalho */}
@@ -31,6 +35,7 @@ function Navbar() {
           <span onClick={irParaCadastro}>CADASTRO</span>
           <span onClick={irParaIntroQuiz}>QUIZ</span>
           <span onClick={irParaConfiguracoes}>CONTA</span>
+          <span onClick={irParaLogin}>LOGIN</span>
         </div>
       </header>
 
