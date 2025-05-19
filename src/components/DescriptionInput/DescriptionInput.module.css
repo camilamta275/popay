@@ -25,3 +25,6 @@
     outline: none;
   }
   
+  .input::placeholder {
+  color: #FFFFFF;
+}

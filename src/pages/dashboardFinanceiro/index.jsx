@@ -12,18 +12,7 @@ function PopayDashboard() {
 
   return (
     <div className="dashboard-container">
-      {/* Cabeçalho */}
-      <header className="navbar">
-        <h1>PoPay</h1>
-        <div className="menu-options">
-          <span className="menu-active">VISÃO GERAL</span>
-          <span>LANÇAMENTOS</span>
-          <span>RELATÓRIOS</span>
-          <span>METAS</span>
-        </div>
-      </header>
 
-      <div className="divider"></div>
 
       {/* Cartões Resumo */}
       <div className="summary-cards">
@@ -51,8 +40,7 @@ function PopayDashboard() {
         <div className="summary-card">
           <h3>Acesso rápido</h3>
           <div className="quick-access-buttons">
-          <button onClick={irParaCadastro} className="quick-button income-button"> ❌ Despesas</button>
-          <button onClick={irParaCadastro} className="quick-button income-button">💲 Receita</button>
+          <button onClick={irParaCadastro} className="quick-button income-button">Cadastrar Movimentação</button>
           </div>
         </div>
       </div>
