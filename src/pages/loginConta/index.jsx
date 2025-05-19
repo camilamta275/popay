@@ -70,7 +70,7 @@ const loginConta = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <div className="titulo">Minha Solução</div>
+        <div className="titulo">Login</div>
 
         <div className="input-field">
           <label>Usuário</label>
