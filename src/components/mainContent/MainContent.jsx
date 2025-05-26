@@ -1,16 +1,19 @@
 import React from "react";
-import "./MainContent.css"; // ou HeroSection.css, se preferir separar
+import "./MainContent.css";
 
 const MainContent = () => {
+
   return (
+
+    
     <section className="hero-background">
       <div className="hero-content">
-        <h1>FAÇA O SEU ORÇAMENTO</h1>
+        <h1>ORGANIZE SUAS FINANÇAS AGORA!</h1>
         <p>
           Garanta um futuro mais tranquilo, <br />
           comece a planejar desde já!
         </p>
-        <button className="cta-button">100% GRÁTIS. BAIXE AGORA!</button>
+        <button className="cta-button">Comece agora!</button>
       </div>
     </section>
   );

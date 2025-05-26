@@ -8,6 +8,9 @@ import IntroQuiz from './pages/testeFinanceiro/intro';
 import Configuracoes from './pages/configuracoesConta';
 import LoginContas from './pages/loginConta';
 import LandingPage from './pages/landingPages/index.jsx';
+import ComoFunciona from 'src/pages/landingPages/comoFunciona/index.jsx';
+import Investimentos from 'src/pages/landingPages/investimentos/index.jsx';
+import Educacao from 'src/pages/landingPages/educacaoFinanceira/index.jsx';
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -23,6 +26,9 @@ function App() {
         <Route path="/introQuiz" element={<IntroQuiz />} />
         <Route path="/quiz" element={<QuizFinanceiro />} />
         <Route path="/login" element={<LoginContas />} />
+        <Route path="/sobre" element={<ComoFunciona />} />
+        <Route path="/investimentos" element={<Investimentos />} />
+        <Route path="/educacao" element={<Educacao />} />
       </Routes>
     </BrowserRouter>
   );
