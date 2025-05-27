@@ -1,0 +1,146 @@
+/* style.css */
+:root {
+  --primary-dark-green: #2E7D32;
+  --primary-medium-green: #8BC34A;
+  --primary-bright-green: #64DD17;
+  --background-beige: #F5F5DC;
+  --background-light: #F8F9FA;
+  --text-dark: #333;
+  --text-light: #FFF;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background-beige);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.how-it-works-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.how-it-works-header {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.how-it-works-header h1 {
+  color: var(--primary-dark-green);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.brand-name {
+  color: var(--primary-medium-green);
+  font-weight: bold;
+}
+
+.how-it-works-header p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.steps-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.step-card {
+  background-color: var(--background-light);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon {
+  font-size: 2.5em; /* Aumentado para ícones emoji */
+  margin-bottom: 15px;
+  color: var(--primary-dark-green);
+  background-color: #e0f2e1; /* Fundo leve para o ícone */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+}
+
+.step-title {
+  color: var(--primary-dark-green);
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 0.95em;
+  color: #444;
+}
+
+.how-it-works-footer {
+  margin-top: 30px;
+  padding: 30px 20px;
+  background-color: #2E7D32;
+  color: var(--text-light);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.how-it-works-footer p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.cta-button {
+  background-color: var(--primary-bright-green);
+  color: white; /* Texto escuro para contraste com verde brilhante */
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+  background-color: var(--primary-medium-green);
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .how-it-works-header h1 {
+    font-size: 2em;
+  }
+  .steps-section {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+  .step-card {
+    text-align: center; /* Centralizar conteúdo do card em mobile */
+  }
+  .step-icon {
+    margin-left: auto;
+    margin-right: auto; /* Centralizar o ícone */
+  }
+}

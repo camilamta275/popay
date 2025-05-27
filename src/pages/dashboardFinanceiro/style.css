@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #F5F5DC; /* Bege claro mais suave que branco puro */
+  color: #2E7D32;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Cards principais */
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.summary-card {
+  background-color: #2E7D32;
+  color: #F8F9FA;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 230px;
+}
+
+.value-box {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.value-income {
+  background-color: #64DD17;
+  color: #F5F5DC;
+}
+
+.value-expense {
+  background-color: #8BC34A;
+  color: #F5F5DC;
+}
+
+.report-button {
+  margin-top: 1rem;
+  background-color: #64DD17;
+  color: #F5F5DC;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.875rem;
+  transition: background 0.3s;
+}
+
+.report-button:hover {
+  background-color: #558B2F;
+}
+
+/* Acesso rápido */
+.quick-access h3 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #2E7D32;
+}
+
+.quick-access-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quick-button {
+  margin-top: 1rem;
+  background-color: #64DD17;
+  color: #F5F5DC;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.875rem;
+  transition: background 0.3s;
+}
+
+.register-button {
+  background-color: #8BC34A;
+}
+
+.income-button {
+  background-color: #64DD17;
+}
+
+.quick-button:hover {
+  opacity: 0.9;
+}
+
+/* Grid dos cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: #F8F9FA;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #2E7D32;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-description {
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+.card-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #DCEDC8;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #2E7D32;
+}
+
+/* Próximas Faturas */
+.card-warning {
+  background-color: #8BC34A;
+  color: #F5F5DC;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-warning h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-warning-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-warning-item {
+  background-color: #64DD17;
+  color: #F5F5DC;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+}
+
+/* Seção Minhas Contas */
+.accounts-section {
+  background-color: #2E7D32;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  color: #F5F5DC;
+  margin-bottom: 2rem;
+}
+
+.accounts-section h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.accounts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.account-item {
+  background-color: #4CAF50;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #F5F5DC;
+}
+
+.account-value {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Gastos + Metas */
+.card-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-gastos, .card-metas {
+  flex: 1;
+  min-width: 300px;
+}
