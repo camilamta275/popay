@@ -1,5 +1,5 @@
 .hero-background {
-  background-image: url("public/assets/imagemDeInicio.jpg"); /* Caminho ajustado */
+  background-image: url("/assets/imagemDeInicio.jpg"); /* Caminho ajustado */
   background-size: cover;
   background-position: center;
   height: 100vh;
