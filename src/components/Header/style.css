@@ -1,67 +1,178 @@
-/* Cabeçalho */
+/* Estilos Globais e do Cabeçalho (Desktop First) */
+body {
+  margin: 0;
+  font-family: sans-serif; /* Adicione uma fonte base se não tiver */
+}
+
 .navbar {
   background-color: #8BC34A;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra mais intensa */
-  position: sticky;
-  top: 10px; /* dá um espaço do topo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky; /* Mantém no topo ao rolar */
+  top: 10px;
   z-index: 1000;
   border-radius: 12px;
-  margin: 10px 20px; /* margem externa nas laterais e topo */
+  margin: 10px 20px;
+  /* Adicionado para ser o contexto de posicionamento do menu suspenso, se necessário,
+     mas 'sticky' já cria um contexto de empilhamento.
+     Se o menu-options for position:absolute, este 'relative' ajuda.
+     No entanto, como o menu-options será posicionado em relação à viewport
+     ou ao próprio navbar, isso pode não ser estritamente necessário para 'sticky'.
+     Vamos manter 'sticky'. Para o menu-options.active, usaremos position:absolute
+     para sobrepor o conteúdo da página, e ele se alinhará ao navbar.
+  */
 }
-
 
 .navbar h1 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 24px */
   color: #F5F5DC;
   margin: 0;
+  cursor: pointer; /* Já estava no inline style, pode ser global aqui */
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #F5F5DC;
-  font-weight: 500;
-  transition: color 0.3s, border-bottom 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: #2E7D32;
-  border-bottom: 2px solid #2E7D32;
-  padding-bottom: 3px;
-}
-
+/* Container dos links de navegação principal */
 .menu-options {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.875rem;
+  display: flex; /* Visível e em linha por padrão (desktop) */
+  align-items: center;
+  gap: 1rem; /* 16px */
+  font-size: 0.875rem; /* 14px */
+  list-style: none; /* Se fosse uma ul */
+  padding: 0;
+  margin: 0;
 }
 
 .menu-options span {
+  color: #F5F5DC;
+  font-weight: 500;
+  text-decoration: none;
   cursor: pointer;
   opacity: 0.7;
-  transition: 0.3s;
+  transition: color 0.3s, opacity 0.3s, text-decoration 0.3s;
+  padding: 5px 0; /* Ajuste para melhor área de clique e alinhamento */
 }
 
 .menu-options span:hover,
-.menu-active {
+.menu-options span.menu-active { /* Usando .menu-active como no JSX */
   font-weight: 600;
   opacity: 1;
   text-decoration: underline;
-  color: #64DD17;
+  color: #64DD17; /* Cor de destaque no hover/ativo */
+}
+
+/* Estilos para o botão do menu hambúrguer */
+.menu-toggle {
+  display: none; /* Escondido em telas grandes */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px; /* Largura do botão */
+  height: 25px; /* Altura do botão */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001; /* Para ficar acima de outros elementos do navbar se necessário */
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 100%;
+  height: 3px; /* Espessura das barras */
+  background-color: #F5F5DC; /* Cor das barras */
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animação do Hambúrguer para "X" quando .active está no .menu-toggle */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .divider {
-  margin: 1rem 0;
+  margin: 1rem 0; /* 16px */
+  /* Este divider pode precisar de ajustes se estiver dentro
+     ou muito próximo do header em telas pequenas.
+     Considere display: none para ele em telas pequenas se não for necessário
+     ou se atrapalhar o layout do menu suspenso.
+  */
+}
+
+/* ---- Media Query para Telas Menores (ex: até 768px) ---- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    margin: 0; /* Ocupa a largura total, sem margens laterais */
+    top: 0; /* Cola no topo da viewport */
+    border-radius: 0; /* Sem bordas arredondadas para ocupar a largura total */
+    flex-wrap: wrap; /* Permite que o h1 e o toggle fiquem na mesma linha e o menu quebre abaixo */
+    position: sticky; /* Ou fixed, se preferir que sempre fique visível e não empurre conteúdo */
+  }
+
+  .navbar h1 {
+    font-size: 1.3rem; /* Ajuste o tamanho se necessário */
+    /* margin-bottom: 0;  Não precisa de margem se o toggle estiver ao lado */
+  }
+
+  .menu-toggle {
+    display: flex; /* Mostra o botão hambúrguer */
+    /* Posicionado pelo flex-container do navbar, não precisa de position:absolute aqui
+       se o navbar for justify-content: space-between */
+  }
+
+  .menu-options {
+    display: none; /* Esconde os links por padrão */
+    flex-direction: column; /* Links empilhados verticalmente */
+    width: 100%; /* Ocupa toda a largura do navbar */
+    background-color: #8BC34A; /* Fundo para o menu suspenso */
+    
+    /* Posicionamento para menu suspenso que cobre a tela abaixo do header */
+    position: absolute; /* Fundamental para o menu suspenso */
+    top: 100%; /* Começa logo abaixo do header. Ajuste se o header tiver altura dinâmica. */
+               /* Se o header tiver altura fixa, ex: 60px, use top: 60px; */
+    left: 0;
+    right: 0;
+    
+    padding: 10px 0; /* Espaçamento interno vertical, sem padding lateral para ocupar a largura */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para o menu suspenso */
+    border-top: 1px solid rgba(245, 245, 220, 0.2); /* Linha sutil no topo */
+    /* Remover gap e font-size herdados se não forem adequados aqui */
+    gap: 0;
+    font-size: 1rem; /* Pode aumentar um pouco para mobile */
+  }
+
+  .menu-options.active {
+    display: flex; /* Mostra os links quando o menu está ativo */
+  }
+
+  .menu-options span {
+    width: 100%; /* Cada link ocupa a largura total */
+    padding: 15px 20px; /* Mais padding para melhor toque */
+    opacity: 1; /* Garante opacidade total no mobile, se necessário */
+    color: #F5F5DC; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado por padrão no mobile */
+    border-bottom: 1px solid rgba(245, 245, 220, 0.15); /* Divisor sutil entre links */
+  }
+
+  .menu-options span:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+  }
+
+  .menu-options span:hover,
+  .menu-options span.menu-active {
+    background-color: rgba(46, 125, 50, 0.2); /* Cor de fundo sutil no hover/ativo */
+    color: #F5F5DC; /* Mantém a cor do texto ou pode mudar para #64DD17 */
+    text-decoration: none; /* Geralmente não se usa sublinhado em menus mobile assim */
+    font-weight: bold; /* Destaca o item ativo/hover */
+  }
+
 }
