@@ -3,6 +3,14 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 import Navbar from 'src/components/Navbar/navbar.jsx';
 import CaixinhasSection from 'src/components/Caixinhas/CaixinhasSection.jsx';
+import SugestoesConsumo from 'src/components/SugestoesConsumo/SugestoesConsumo';
+
+const historicoFicticio = [
+  { categoria: 'Alimentação', valor: 200 },
+  { categoria: 'Streaming', valor: 200 },
+  { categoria: 'Transporte', valor: 700 },
+  { categoria: 'Delivery', valor: 500 },
+];
 
 function PopayDashboard() {
   const navigate = useNavigate();
@@ -141,6 +149,7 @@ function PopayDashboard() {
             <CaixinhasSection />
           
         </section>
+        <SugestoesConsumo historico={historicoFicticio} />
       </div>
     </>
   );

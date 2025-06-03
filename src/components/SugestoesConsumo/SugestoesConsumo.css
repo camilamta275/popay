@@ -1,0 +1,33 @@
+.sugestoes-section {
+    padding: 1.5rem;
+    background-color: #fdfdfd;
+  }
+  
+  .lista-sugestoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card-sugestao {
+    flex: 1 1 300px;
+    background-color: #fff8dc;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-sugestao strong {
+    font-size: 1.1rem;
+  }
+  
+  .texto-sugestao {
+    margin-top: 0.5rem;
+    color: #444;
+  }
+  
+  .nenhuma-sugestao {
+    font-style: italic;
+    color: #2e7d32;
+  }
+  
