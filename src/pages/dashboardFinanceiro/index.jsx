@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 import Navbar from 'src/components/Navbar/navbar.jsx';
+import CaixinhasSection from 'src/components/Caixinhas/CaixinhasSection.jsx';
 
 function PopayDashboard() {
   const navigate = useNavigate();
@@ -136,6 +137,9 @@ function PopayDashboard() {
               ))}
             </div>
           </div>
+          
+            <CaixinhasSection />
+          
         </section>
       </div>
     </>
