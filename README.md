@@ -171,4 +171,10 @@ Você também pode ver erros de lint no console.
 
   ## [Issue Bug tracker](https://github.com/camilamta275/popay/issues)
 
+- História do Usuário - Previsão de Gastos
+
+    <img src="assets/diagrama-cadastro.jpg" alt="" width= "350">
+      
+    - Programadora piloto: Ana Sofia Da Silva Moura 
+    - Programadora copiloto: Camila Maria
 
