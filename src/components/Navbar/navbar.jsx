@@ -42,7 +42,7 @@ function Navbar() {
     { label: 'VISÃO GERAL', path: '/dashboard' },
     { label: 'CHATBOT', path: '/chat' },
     { label: 'OPEN FINANCE', path: '/finance' },
-    { label: 'CADASTRO', path: '/cadastro' },
+    { label: 'GASTOS FUTUROS', path: '/gastos' },
     { label: 'QUIZ', path: '/introQuiz' },
     { label: 'CONTA', path: '/conta' }
   ];

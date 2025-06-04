@@ -12,6 +12,7 @@ import Investimentos from 'src/pages/landingPages/investimentos/index.jsx';
 import Educacao from 'src/pages/landingPages/educacaoFinanceira/index.jsx';
 import Chatbot from 'src/pages/chatBot/index.jsx';
 import OpenFinance from 'src/pages/openFinance/index.jsx';
+import GastosFuturos from 'src/pages/previsoesGastos/index.jsx';
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -31,6 +32,7 @@ function App() {
         <Route path="/educacao" element={<Educacao />} />
         <Route path="/chat" element={<Chatbot />} />
         <Route path="/finance" element={<OpenFinance />} />
+        <Route path="/gastos" element={<GastosFuturos />} />
       </Routes>
     </BrowserRouter>
   );

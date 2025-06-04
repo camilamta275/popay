@@ -20,6 +20,11 @@ function PopayDashboard() {
     navigate('/cadastro');
   };
 
+    const irParaGastosFuturos = () => {
+    navigate('/gastos');
+  };
+
+
   return (
     <>
       <Navbar />
@@ -28,7 +33,7 @@ function PopayDashboard() {
         {/* Cartões Resumo */}
         <div className="summary-cards">
           <div className="summary-card">
-            <h3>Boa noite, Kacey Musgraves!</h3>
+            <h3>Olá Kacey Musgraves!</h3>
             <div className="value-box value-income">
               receita mensal <br /> +832,92
             </div>
@@ -37,7 +42,7 @@ function PopayDashboard() {
           <div className="summary-card">
             <h3>Kacey, confira o acúmulo de suas despesas!</h3>
             <div className="value-box value-expense">
-              despesa mensal <br /> +832,92
+              despesa mensal <br /> -832,92
             </div>
           </div>
 
@@ -45,7 +50,7 @@ function PopayDashboard() {
             <h3>
               saldo geral <br /> R$ 22.321,20
             </h3>
-            <button className="report-button">📊 ver relatórios</button>
+            <button onClick={irParaGastosFuturos} className="report-button">📊 ver relatórios</button>
           </div>
 
           <div className="summary-card">
@@ -59,7 +64,7 @@ function PopayDashboard() {
         </div>
 
         <AlertasGastos />
-
+        
         {/* Próximas Faturas */}
         <section className="card-warning">
           <h3>
