@@ -40,7 +40,7 @@ function IntroQuiz() {
 
             <Box
               component="img"
-              src="src/assets/imagemIntro.png"
+              src="/assets/imagemIntro.png"
               alt="Imagem de introdução"
               sx={{
                 width: '100%',

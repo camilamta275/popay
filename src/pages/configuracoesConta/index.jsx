@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // 1. Corrigido: useState importado
 import './style.css';
-import Navbar from 'src/components/Navbar/navbar.jsx';
+import { useNavigate } from 'react-router-dom';
+import Navbar from 'src/components/Navbar/Navbar.jsx'; // Convenção de nome de arquivo
 
 function AccountSettings() {
+  const navigate = useNavigate();
+
+  const irParaLandingPage = () => {
+    navigate('/');
+  };
+
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+  const [senha, setSenha] = useState(''); // Considere se realmente quer exibir a senha digitada aqui
   const [erroEmail, setErroEmail] = useState('');
 
   const emailEhValido = (email) => {
@@ -20,14 +27,19 @@ function AccountSettings() {
     }
 
     setErroEmail('');
-    console.log({ nome, email, senha });
-    alert('Alterações salvas!');
+    console.log('Dados para salvar:', { nome, email, senha }); // Evitar logar senha em produção
+    alert('Alterações salvas! (Simulação)');
+    // Aqui viria a lógica de API para salvar os dados
+    // setSenha(''); // Limpar campo de senha após salvar por segurança
   };
 
-  const handleDeleteAccount = () => {
-    const confirmar = window.confirm('Tem certeza que deseja excluir sua conta?');
+  // 2. Lógica de sair da conta corrigida
+  const handleLogout = () => {
+    const confirmar = window.confirm('Tem certeza que deseja sair da sua conta?');
     if (confirmar) {
-      alert('Conta excluída.');
+      alert('Saindo...');
+      // Lógica de logout real aqui (ex: limpar tokens, chamar API de logout)
+      irParaLandingPage(); // Navegar após confirmação e lógicas de logout
     }
   };
 
@@ -64,6 +76,7 @@ function AccountSettings() {
             id="senha"
             type="password"
             value={senha}
+            placeholder="Deixe em branco para não alterar" // Sugestão
             onChange={(e) => setSenha(e.target.value)}
           />
 
@@ -73,8 +86,8 @@ function AccountSettings() {
 
           <hr />
 
-          <button className="delete-button" onClick={handleDeleteAccount}>
-            Excluir Conta
+          <button className="delete-button" onClick={handleLogout}> {/* onClick alterado */}
+            Sair da Conta
           </button>
         </div>
       </div>

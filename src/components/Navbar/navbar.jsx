@@ -40,10 +40,11 @@ function Navbar() {
 
   const menuItems = [
     { label: 'VISÃO GERAL', path: '/dashboard' },
+    { label: 'CHATBOT', path: '/chat' },
+    { label: 'OPEN FINANCE', path: '/finance' },
     { label: 'CADASTRO', path: '/cadastro' },
     { label: 'QUIZ', path: '/introQuiz' },
-    { label: 'CONTA', path: '/conta' },
-    { label: 'LOGIN', path: '/login' }
+    { label: 'CONTA', path: '/conta' }
   ];
 
   return (
