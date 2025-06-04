@@ -177,6 +177,6 @@ Você também pode ver erros de lint no console.
       - Programador piloto: 
       - Programador copiloto:
 
-  ## Issue Bug tracker ♾️
+  ## [Issue Bug tracker](https://github.com/camilamta275/popay/issues)
 
 
