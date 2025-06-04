@@ -147,11 +147,11 @@ Você também pode ver erros de lint no console.
 ## Sprint 3 ♾️
   - História do usuário - Previsão de Gastos Futuros
 
-    <img src="assets/" alt="" width="350"/>
+    <img src="assets/previsao_uml.jpg" alt="" width="350"/>
       
 
-      - Programador piloto: 
-      - Programador copiloto:
+      - Programador piloto: Ana Sofia da Silva Moura
+      - Programador copiloto: Camila Maria Teixeira Alcântara
 
 
   - História do usuário - Caixinhas para Organização do Dinheiro
@@ -166,9 +166,8 @@ Você também pode ver erros de lint no console.
 
     <img src= "assets/UML Activity Diagram.jpg" alt="" width= "350">
       
-      
-      - Programador piloto: 
-      - Programador copiloto:
+    - Programador piloto: Lucas Rodrigues da Silva Junior
+    - Programador copiloto: René Lucena
 
   ## [Issue Bug tracker](https://github.com/camilamta275/popay/issues)
 
