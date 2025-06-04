@@ -110,7 +110,7 @@ Você também pode ver erros de lint no console.
 
   - História do usuário - Dashboard de vizualização financeira
     
-    <img src="assets/Dashboard.jpg" alt="Diagrama de atividades da Visão Geral" width="350"/>
+    <img src="assets/Dashboard_UML.jpg" alt="Diagrama de atividades da Visão Geral" width="350"/>
     
     
       - Programador piloto: Lucas Rodrigues da Silva Junior
