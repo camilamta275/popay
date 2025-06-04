@@ -121,6 +121,7 @@ Você também pode ver erros de lint no console.
 - História do usuário - Integração com Open Finance
     <img src="assets/" alt="" width="350"/>
       
+
       - Programador piloto: 
       - Programador copiloto: 
 
@@ -128,6 +129,7 @@ Você também pode ver erros de lint no console.
 - História do usuário - Alertas de Gastos Acima da Média
     <img src="assets/" alt="" width="350"/>
       
+
       - Programador piloto: 
       - Programador copiloto: 
 
@@ -135,6 +137,7 @@ Você também pode ver erros de lint no console.
 - História do usuário - Chatbot para educação financeira
     <img src="assets/" alt="" width="350"/>
       
+
       - Programador piloto: 
       - Programador copiloto: 
 
@@ -142,6 +145,7 @@ Você também pode ver erros de lint no console.
 - História do usuário - Sugestões para ajustes de gastos
     <img src="assets/" alt="" width="350"/>
       
+
       - Programador piloto: 
       - Programador copiloto: 
 
@@ -149,6 +153,7 @@ Você também pode ver erros de lint no console.
 - História do usuário - Previsão de Gastos Futuros
     <img src="assets/" alt="" width="350"/>
       
+
       - Programador piloto: 
       - Programador copiloto: 
 
@@ -156,7 +161,8 @@ Você também pode ver erros de lint no console.
 - História do usuário - Caixinhas para Organização do Dinheiro
     <img src="assets/" alt="" width="350"/>
       
+      
       - Programador piloto: 
       - Programador copiloto: 
 
-      
+
