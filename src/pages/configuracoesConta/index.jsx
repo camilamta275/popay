@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; // 1. Corrigido: useState importado
 import './style.css';
 import { useNavigate } from 'react-router-dom';
-import Navbar from 'src/components/Navbar/Navbar.jsx'; // Convenção de nome de arquivo
+import Navbar from 'src/components/Navbar/navbar.jsx'; // Convenção de nome de arquivo
 
 function AccountSettings() {
   const navigate = useNavigate();
