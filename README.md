@@ -165,6 +165,11 @@ Você também pode ver erros de lint no console.
   - História do usuário - Caixinhas para Organização do Dinheiro
   
     <img src="assets/" alt="" width="350"/>
+
+
+- História do Usuário - Alerta de Gastos
+
+    <img src= "assets/UML Activity Diagram.jpg" alt="" width= "350">
       
       
       - Programador piloto: 
