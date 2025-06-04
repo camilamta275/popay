@@ -1,5 +1,5 @@
 .alertas-gastos-section {
-  background: white;
+  background: #F5F5DC;
   border-radius: 12px;
   padding: 24px;
   margin: 20px 0;
@@ -7,15 +7,14 @@
 }
 
 .alertas-gastos-section h3 {
-  color: #065f46;
+  color: #2E7D32;
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 20px;
-  border-bottom: 2px solid #10b981;
+  border-bottom: 2px solid #8BC34A;
   padding-bottom: 10px;
 }
 
-/* Alertas Ativos */
 .alertas-ativos {
   margin-bottom: 24px;
 }
@@ -30,6 +29,7 @@
   font-weight: 500;
 }
 
+
 .alerta-perigo {
   background-color: #fef2f2;
   border: 1px solid #fecaca;
@@ -43,9 +43,9 @@
 }
 
 .alerta-seguro {
-  background-color: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  color: #16a34a;
+  background-color: #e8f5e9; /* Um verde bem claro, complementar à paleta */
+  border: 1px solid #8BC34A;   /* Verde Claro da paleta */
+  color: #2E7D32;            /* Verde Escuro da paleta para o texto */
 }
 
 .alerta-icone {
@@ -84,7 +84,7 @@
 
 .meta-nome {
   font-weight: 500;
-  color: #374151;
+  color: #2E7D32; /* Verde Escuro para o nome da meta */
 }
 
 .meta-valores {
@@ -95,7 +95,7 @@
 
 .meta-valor {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #555; /* Cinza escuro para valores, para contraste com o verde do nome */
 }
 
 .meta-porcentagem {
@@ -104,22 +104,22 @@
 }
 
 .meta-seguro {
-  color: #16a34a;
+  color: #2E7D32; /* Verde Escuro para texto "seguro" */
 }
 
 .meta-atencao {
-  color: #d97706;
+  color: #d97706; /* Mantido */
 }
 
 .meta-perigo {
-  color: #dc2626;
+  color: #dc2626; /* Mantido */
 }
 
 /* Barra de Progresso */
 .meta-progress-bar {
   width: 100%;
   height: 8px;
-  background-color: #f3f4f6;
+  background-color: #F8F9FA; /* Cinza Muito Claro/Branco para o fundo da barra */
   border-radius: 4px;
   overflow: hidden;
 }
@@ -131,29 +131,31 @@
 }
 
 .meta-fill-seguro {
-  background-color: #10b981;
+  background-color: #64DD17; /* Verde Brilhante para progresso "seguro" */
 }
 
 .meta-fill-atencao {
-  background-color: #f59e0b;
+  background-color: #f59e0b; /* Mantido */
 }
 
 .meta-fill-perigo {
-  background-color: #ef4444;
+  background-color: #ef4444; /* Mantido */
 }
 
 /* Resumo Geral */
 .resumo-gastos {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  /* Gradiente com os verdes da paleta */
+  background: linear-gradient(135deg, #2E7D32 0%, #8BC34A 100%);
   border-radius: 12px;
   padding: 20px;
-  color: white;
+  color: #F8F9FA; /* Cinza Muito Claro/Branco para texto sobre o gradiente escuro */
 }
 
 .resumo-gastos h4 {
   margin-bottom: 16px;
   font-size: 1.1rem;
   font-weight: 600;
+  /* A cor já é #F8F9FA devido ao color do pai .resumo-gastos */
 }
 
 .resumo-items {
@@ -172,12 +174,12 @@
 .resumo-saldo {
   font-weight: 600;
   font-size: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(248, 249, 250, 0.3); /* Borda usando uma transparência do texto claro */
   padding-top: 8px;
   margin-top: 8px;
 }
 
-/* Responsividade */
+/* Responsividade (sem alterações de cor aqui, apenas para manter a estrutura) */
 @media (max-width: 768px) {
   .alertas-gastos-section {
     padding: 16px;

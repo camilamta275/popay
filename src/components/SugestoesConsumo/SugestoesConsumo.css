@@ -1,33 +1,88 @@
 .sugestoes-section {
-    padding: 1.5rem;
-    background-color: #fdfdfd;
+  padding: 1.5rem;  
+}
+
+.lista-sugestoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Espaçamento entre os cards */
+}
+
+.card-sugestao {
+  flex: 1 1 300px; /* Permite crescer, encolher, com base ideal de 300px */
+  background-color: #F8F9FA; /* Bege para o fundo do card */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra mantida neutra */
+  /* Opcional: adicionar uma borda com um dos verdes */
+  /* border: 1px solid #8BC34A; */
+  min-width: 280px; /* Adiciona uma largura mínima para evitar que os cards fiquem muito estreitos antes de quebrar */
+}
+
+.card-sugestao strong {
+  font-size: 1.1rem;
+  color: #2E7D32; /* Verde escuro para o título dentro do card, para bom contraste */
+  display: block; /* Garante que o strong ocupe a linha e o margin-bottom funcione como esperado */
+  margin-bottom: 0.5rem; /* Adiciona um espaço abaixo do título */
+}
+
+.texto-sugestao {
+  /* margin-top já estava em 0.5rem, mas como o strong agora tem margin-bottom, pode não ser mais necessário ou pode ser ajustado. */
+  color: #2E7D32; /* Verde escuro para o texto principal no card, garantindo legibilidade */
+  font-size: 0.9rem; /* Pode ser ajustado conforme necessário */
+}
+
+.nenhuma-sugestao {
+  font-style: italic;
+  color: #2E7D32; /* Verde escuro mantido, pois já se alinha com a paleta */
+  width: 100%; /* Para ocupar toda a largura se não houver sugestões */
+  text-align: center; /* Centraliza o texto */
+  padding: 2rem 0; /* Adiciona um espaçamento vertical */
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Para telas médias (tablets em retrato e celulares maiores em paisagem) */
+@media (max-width: 768px) {
+  .sugestoes-section {
+    padding: 1rem; /* Reduz o padding da seção */
   }
-  
-  .lista-sugestoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
+
   .card-sugestao {
-    flex: 1 1 300px;
-    background-color: #fff8dc;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 0.5rem); /* Tenta fazer 2 colunas, considerando o gap (1rem / 2) */
+    /* Se o gap for 1rem, cada card ocupa 50% menos metade do gap para caberem 2.
+       Ajuste esse cálculo se o gap mudar.
+       Ex: Se quiser garantir 2 colunas com gap de 1rem, cada card pode ter flex-basis: calc(50% - 0.5rem)
+       Se quiser que o card possa ser um pouco menor, pode usar um valor fixo menor: flex-basis: 250px;
+    */
+    min-width: 0; /* Reseta o min-width para permitir que o calc funcione corretamente */
   }
-  
+
   .card-sugestao strong {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Levemente menor em telas médias */
   }
-  
+
   .texto-sugestao {
-    margin-top: 0.5rem;
-    color: #444;
+    font-size: 0.85rem; /* Levemente menor em telas médias */
   }
-  
-  .nenhuma-sugestao {
-    font-style: italic;
-    color: #2e7d32;
+}
+
+/* Para telas pequenas (celulares em retrato) */
+@media (max-width: 480px) {
+  .lista-sugestoes {
+    gap: 0.75rem; /* Reduz o espaçamento entre os cards */
   }
-  
+
+  .card-sugestao {
+    flex-basis: 100%; /* Faz cada card ocupar a largura total */
+    /* Não precisa de min-width aqui, pois já é 100% */
+  }
+
+  .card-sugestao strong {
+    font-size: 1.05rem; /* Pode até aumentar um pouco para títulos em tela cheia, ou manter 1rem */
+  }
+
+  .texto-sugestao {
+    font-size: 0.9rem; /* Pode manter ou ajustar levemente */
+  }
+}
