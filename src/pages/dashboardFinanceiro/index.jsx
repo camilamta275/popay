@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from 'src/components/Navbar/navbar.jsx';
 import CaixinhasSection from 'src/components/Caixinhas/CaixinhasSection.jsx';
 import SugestoesConsumo from 'src/components/SugestoesConsumo/SugestoesConsumo';
+import AlertasGastos from 'src/pages/dashboardFinanceiro/AlertasGastos.jsx';
 
 const historicoFicticio = [
   { categoria: 'Alimentação', valor: 200 },
@@ -56,6 +57,8 @@ function PopayDashboard() {
             </div>
           </div>
         </div>
+
+        <AlertasGastos />
 
         {/* Próximas Faturas */}
         <section className="card-warning">
