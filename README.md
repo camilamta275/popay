@@ -116,14 +116,14 @@ Você também pode ver erros de lint no console.
       - Programador piloto: Lucas Rodrigues da Silva Junior
       - Programador copiloto: Camila Maria Teixeira Alcântara
 
-**Sprint 3**
+**Sprint 3**  
 
 - História do usuário - Integração com Open Finance
-    <img src="assets/" alt="" width="350"/>
+    <img src="assets/diagramaOpenFinance.jpg" alt="" width="350"/>
       
 
-      - Programador piloto: 
-      - Programador copiloto: 
+      - Programador piloto: Camila Maria Teixeira Alcântara
+      - Programador copiloto: René Melo de Lucena
 
 
 - História do usuário - Alertas de Gastos Acima da Média
@@ -135,11 +135,11 @@ Você também pode ver erros de lint no console.
 
 
 - História do usuário - Chatbot para educação financeira
-    <img src="assets/" alt="" width="350"/>
+    <img src="assets/diagramaChatbot.jpg" alt="" width="350"/>
       
 
-      - Programador piloto: 
-      - Programador copiloto: 
+      - Programador piloto: Camila Maria Teixeira Alcântara
+      - Programador copiloto: Ana Sofia da Silva Moura
 
 
 - História do usuário - Sugestões para ajustes de gastos
