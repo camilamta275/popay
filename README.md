@@ -116,7 +116,7 @@ Você também pode ver erros de lint no console.
       - Programador piloto: Lucas Rodrigues da Silva Junior
       - Programador copiloto: Camila Maria Teixeira Alcântara
 
-**Sprint 3**  
+## Sprint 2 ♾️
 
   - História do usuário - Integração com Open Finance
 
@@ -152,7 +152,7 @@ Você também pode ver erros de lint no console.
       - Programador piloto: René Lucena
       - Programador copiloto: Camila Maria Teixeira Alcântara
 
-
+## Sprint 3 ♾️
   - História do usuário - Previsão de Gastos Futuros
 
     <img src="assets/" alt="" width="350"/>
@@ -175,6 +175,8 @@ Você também pode ver erros de lint no console.
       
       
       - Programador piloto: 
-      - Programador copiloto: 
+      - Programador copiloto:
+
+  ## Issue Bug tracker ♾️
 
 
