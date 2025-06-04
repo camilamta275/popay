@@ -119,55 +119,50 @@ Você também pode ver erros de lint no console.
 **Sprint 3**
 
 - História do usuário - Integração com Open Finance
-    
-    <img src="assets/" alt="Diagrama de atividades" width="350"/>
-    
-    
-      - Programador piloto: Lucas Rodrigues da Silva Junior
-      - Programador copiloto: Camila Maria Teixeira Alcântara
+    <img src="assets/" alt="" width="350"/>
+      
+
+      - Programador piloto: 
+      - Programador copiloto: 
+
 
 - História do usuário - Alertas de Gastos Acima da Média
-    
-    <img src="assets/" alt="Diagrama de atividades" width="350"/>
-    
-    
-      - Programador piloto: Lucas Rodrigues da Silva Junior
-      - Programador copiloto: Camila Maria Teixeira Alcântara
+    <img src="assets/" alt="" width="350"/>
+      
+
+      - Programador piloto: 
+      - Programador copiloto: 
 
 
 - História do usuário - Chatbot para educação financeira
-    
-    <img src="assets/" alt="Diagrama de atividades" width="350"/>
-    
-    
-      - Programador piloto: Lucas Rodrigues da Silva Junior
-      - Programador copiloto: Camila Maria Teixeira Alcântara
+    <img src="assets/" alt="" width="350"/>
+      
+
+      - Programador piloto: 
+      - Programador copiloto: 
 
 
 - História do usuário - Sugestões para ajustes de gastos
-    
-    <img src="assets/" alt="Diagrama de atividades" width="350"/>
-    
-    
-      - Programador piloto: Lucas Rodrigues da Silva Junior
-      - Programador copiloto: Camila Maria Teixeira Alcântara
+    <img src="assets/" alt="" width="350"/>
+      
+
+      - Programador piloto: 
+      - Programador copiloto: 
 
 
 - História do usuário - Previsão de Gastos Futuros
-    
-    <img src="assets/" alt="Diagrama de atividades" width="350"/>
-    
-    
-      - Programador piloto: Lucas Rodrigues da Silva Junior
-      - Programador copiloto: Camila Maria Teixeira Alcântara
+    <img src="assets/" alt="" width="350"/>
+      
+
+      - Programador piloto: 
+      - Programador copiloto: 
 
 
 - História do usuário - Caixinhas para Organização do Dinheiro
-    
-    <img src="assets/" alt="Diagrama de atividades" width="350"/>
-    
-    
-      - Programador piloto: Lucas Rodrigues da Silva Junior
-      - Programador copiloto: Camila Maria Teixeira Alcântara
+    <img src="assets/" alt="" width="350"/>
+      
+      
+      - Programador piloto: 
+      - Programador copiloto: 
 
 
