@@ -128,14 +128,6 @@ Você também pode ver erros de lint no console.
       - Programador copiloto: René Melo de Lucena
 
 
-  - História do usuário - Alertas de Gastos Acima da Média
-    <img src="assets/" alt="" width="350"/>
-      
-
-      - Programador piloto: 
-      - Programador copiloto: 
-
-
   - História do usuário - Chatbot para educação financeira
 
     <img src="assets/diagramaChatbot.jpg" alt="" width="350"/>
