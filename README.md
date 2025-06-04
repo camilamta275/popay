@@ -34,10 +34,14 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 > Algumas histórias que guiaram o desenvolvimento do Popay:
 
 - **Cadastro de Despesas**
-- **Dashboard de Visualização Financeira**
-- **Análise de Gastos pela IA**
+- **Dashboard de Visualização Financeira**  
 - **Integração com Open Finance**
+- **Perfil Financeiro Personalizado**
 - **Alertas de Gastos Acima da Média**
+- **Chatbot para educação financeira**
+- **Sugestões para ajustes de gastos**
+- **Previsão de Gastos Futuros**
+- **Caixinhas para Organização do Dinheiro**
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -50,6 +54,7 @@ O endividamento entre jovens tem crescido de forma alarmante, impulsionado por:
 - **VS Code** – Ambiente de desenvolvimento  
 - **Figma** – Prototipagem e design da interface  
 - **GitHub** – Controle de versão e colaboração  
+- **Vite** - Compilação para ajudar no desenvolvimento
 - **Trello** – Organização de tarefas e planejamento do projeto  
 
 ## 🔗 Links Úteis
@@ -80,9 +85,9 @@ Se o projeto já tem um arquivo package.json, basta rodar:
 **npm install**
 Ele instalará todas as dependências listadas em package.json.
 
-**npm start**
+**npm run dev**
 Executa o aplicativo em modo de desenvolvimento.
-Abra http://localhost:3000 para visualizá-lo no seu navegador.
+Abra http://localhost:3000 ou qualquer outro localhost para visualizá-lo no seu navegador.
 
 A página será recarregada quando você fizer alterações.
 Você também pode ver erros de lint no console.
@@ -110,4 +115,48 @@ Você também pode ver erros de lint no console.
     
       - Programador piloto: Lucas Rodrigues da Silva Junior
       - Programador copiloto: Camila Maria Teixeira Alcântara
-   
+
+**Sprint 3**
+
+- História do usuário - Integração com Open Finance
+    <img src="assets/" alt="" width="350"/>
+      
+      - Programador piloto: 
+      - Programador copiloto: 
+
+
+- História do usuário - Alertas de Gastos Acima da Média
+    <img src="assets/" alt="" width="350"/>
+      
+      - Programador piloto: 
+      - Programador copiloto: 
+
+
+- História do usuário - Chatbot para educação financeira
+    <img src="assets/" alt="" width="350"/>
+      
+      - Programador piloto: 
+      - Programador copiloto: 
+
+
+- História do usuário - Sugestões para ajustes de gastos
+    <img src="assets/" alt="" width="350"/>
+      
+      - Programador piloto: 
+      - Programador copiloto: 
+
+
+- História do usuário - Previsão de Gastos Futuros
+    <img src="assets/" alt="" width="350"/>
+      
+      - Programador piloto: 
+      - Programador copiloto: 
+
+
+- História do usuário - Caixinhas para Organização do Dinheiro
+    <img src="assets/" alt="" width="350"/>
+      
+      - Programador piloto: 
+      - Programador copiloto: 
+
+      
