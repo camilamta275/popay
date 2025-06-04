@@ -146,11 +146,11 @@ Você também pode ver erros de lint no console.
 
   - História do usuário - Sugestões para ajustes de gastos
 
-    <img src="assets/" alt="" width="350"/>
+    <img src="assets/sugestao_UML.jpg" alt="" width="350"/>
       
 
-      - Programador piloto: 
-      - Programador copiloto: 
+      - Programador piloto: René Lucena
+      - Programador copiloto: Camila Maria Teixeira Alcântara
 
 
   - História do usuário - Previsão de Gastos Futuros
@@ -159,12 +159,14 @@ Você também pode ver erros de lint no console.
       
 
       - Programador piloto: 
-      - Programador copiloto: 
+      - Programador copiloto:
 
 
   - História do usuário - Caixinhas para Organização do Dinheiro
   
-    <img src="assets/" alt="" width="350"/>
+    <img src="assets/caixinha_UML.jpg" alt="" width="350"/>
+    - Programador piloto: René Melo de Lucena
+    - Programador copiloto: Lucas Rodrigues da Silva Junior
 
 
 - História do Usuário - Alerta de Gastos
