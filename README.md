@@ -146,7 +146,7 @@ Você também pode ver erros de lint no console.
 
   - História do usuário - Sugestões para ajustes de gastos
 
-    <img src="assets/sugestao_UML.jpg" alt="" width="350"/>
+    <img src="assets/sugestao_uml.jpg" alt="" width="350"/>
       
       - Programador piloto: René Lucena
       - Programador copiloto: Camila Maria Teixeira Alcântara
@@ -163,7 +163,7 @@ Você também pode ver erros de lint no console.
 
   - História do usuário - Caixinhas para Organização do Dinheiro
   
-    <img src="assets/caixinha_UML.jpg" alt="" width="350"/>
+    <img src="assets/caixinha_uml.jpg" alt="" width="350"/>
     
     - Programador piloto: René Melo de Lucena
     - Programador copiloto: Lucas Rodrigues da Silva Junior
