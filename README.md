@@ -118,7 +118,7 @@ Você também pode ver erros de lint no console.
 
 **Sprint 3**  
 
-- História do usuário - Integração com Open Finance
+  - História do usuário - Integração com Open Finance
     <img src="assets/diagramaOpenFinance.jpg" alt="" width="350"/>
       
 
@@ -126,7 +126,7 @@ Você também pode ver erros de lint no console.
       - Programador copiloto: René Melo de Lucena
 
 
-- História do usuário - Alertas de Gastos Acima da Média
+  - História do usuário - Alertas de Gastos Acima da Média
     <img src="assets/" alt="" width="350"/>
       
 
@@ -134,7 +134,7 @@ Você também pode ver erros de lint no console.
       - Programador copiloto: 
 
 
-- História do usuário - Chatbot para educação financeira
+  - História do usuário - Chatbot para educação financeira
     <img src="assets/diagramaChatbot.jpg" alt="" width="350"/>
       
 
@@ -142,7 +142,7 @@ Você também pode ver erros de lint no console.
       - Programador copiloto: Ana Sofia da Silva Moura
 
 
-- História do usuário - Sugestões para ajustes de gastos
+  - História do usuário - Sugestões para ajustes de gastos
     <img src="assets/" alt="" width="350"/>
       
 
@@ -150,7 +150,7 @@ Você também pode ver erros de lint no console.
       - Programador copiloto: 
 
 
-- História do usuário - Previsão de Gastos Futuros
+  - História do usuário - Previsão de Gastos Futuros
     <img src="assets/" alt="" width="350"/>
       
 
@@ -158,7 +158,7 @@ Você também pode ver erros de lint no console.
       - Programador copiloto: 
 
 
-- História do usuário - Caixinhas para Organização do Dinheiro
+  - História do usuário - Caixinhas para Organização do Dinheiro
     <img src="assets/" alt="" width="350"/>
       
       
