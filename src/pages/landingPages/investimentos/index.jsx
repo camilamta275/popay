@@ -3,8 +3,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.css'; // Usaremos o mesmo nome de arquivo CSS por simplicidade
 import HeaderPage from "src/components/Header/HeaderPage.jsx";
+import { useNavigate } from 'react-router-dom';
 
 const PaginaInvestimentos = () => {
+
+  const navigate = useNavigate();
+
+  const irParaHomePage = () => {
+    navigate('/dashboard');
+  };
+
   const whyInvest = [
     {
       id: 1,
@@ -93,12 +101,8 @@ const PaginaInvestimentos = () => {
         <p className="getting-started-text">
           Investir pode parecer complicado, mas com a orientação certa e as ferramentas do <span className="brand-name">PoPay</span>, você estará no caminho certo para construir um futuro financeiro mais próspero e seguro. Explore nossos recursos e comece sua jornada de investidor hoje mesmo!
         </p>
-        <button className="cta-button-invest">Explorar Recursos de Investimento</button>
+        <button className="cta-button-invest" onClick={irParaHomePage}>Explorar Recursos de Investimento</button>
       </section>
-
-      <footer className="investments-footer">
-        <p>&copy; {new Date().getFullYear()} <span className="brand-name">PoPay</span>. Seu parceiro para uma vida financeira mais inteligente.</p>
-      </footer>
     </div>
     </>
   );

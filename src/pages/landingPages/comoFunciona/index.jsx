@@ -3,8 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.css';
 import HeaderPage from "src/components/Header/HeaderPage.jsx";
+import { useNavigate } from 'react-router-dom';
 
 const ComoFunciona = () => {
+  
+  const navigate = useNavigate();
+
+  const irParaHomePage = () => {
+    navigate('/dashboard');
+  };
   const steps = [
     {
       id: 1,
@@ -59,7 +66,7 @@ const ComoFunciona = () => {
 
       <footer className="how-it-works-footer">
         <p>Pronto para começar a trilhar o caminho para uma vida financeira mais equilibrada?</p>
-        <button className="cta-button">Quero Organizar Minhas Finanças!</button>
+        <button className="cta-button" onClick={irParaHomePage}>Quero Organizar Minhas Finanças!</button>
       </footer>
     </div>
     </>

@@ -1,8 +1,13 @@
 import React from "react";
 import "./MainContent.css";
+import { useNavigate } from 'react-router-dom';
 
 const MainContent = () => {
+  const navigate = useNavigate();
 
+  const irParaHomePage = () => {
+    navigate('/dashboard');
+  };
   return (
 
     
@@ -13,7 +18,7 @@ const MainContent = () => {
           Garanta um futuro mais tranquilo, <br />
           comece a planejar desde já!
         </p>
-        <button className="cta-button">Comece agora!</button>
+        <button className="cta-button" onClick={irParaHomePage}>Comece agora!</button>
       </div>
     </section>
   );

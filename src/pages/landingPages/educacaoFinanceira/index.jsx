@@ -3,8 +3,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.css'; // Reutilizando o mesmo nome de arquivo CSS
 import HeaderPage from "src/components/Header/HeaderPage.jsx";
+import { useNavigate } from 'react-router-dom';
 
 const EducacaoFinanceiraPage = () => {
+  
+  const navigate = useNavigate();
+
+  const irParaHomePage = () => {
+    navigate('/dashboard');
+  };
+  
   const learningPillars = [
     {
       id: 1,
@@ -105,12 +113,8 @@ const EducacaoFinanceiraPage = () => {
         <p className="cta-text">
           Dê o primeiro passo rumo a uma relação mais saudável e inteligente com seu dinheiro. Explore nossos módulos e ferramentas de educação financeira.
         </p>
-        <button className="cta-button-education">Começar a Aprender Agora</button>
+        <button className="cta-button-education" onClick={irParaHomePage}>Começar a Aprender Agora</button>
       </section>
-
-      <footer className="education-footer">
-        <p>&copy; {new Date().getFullYear()} <span className="brand-name">PoPay</span>. Capacitando suas decisões financeiras.</p>
-      </footer>
     </div>
     </>
   );
